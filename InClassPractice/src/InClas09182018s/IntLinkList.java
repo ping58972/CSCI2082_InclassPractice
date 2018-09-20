@@ -40,6 +40,7 @@ public class IntLinkList {
 		mylist.add(79);
 		mylist.add(23);
 		mylist.add(899);
+		mylist.add(1299);
 		System.out.println(mylist.toString());
 		
 	}
