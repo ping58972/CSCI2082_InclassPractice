@@ -2,10 +2,12 @@ package InClas09182018s;
 
 public class IntLinkList {
 	private Node head;
+	private Node tail;
 	private int numberOfNodes;
 	public IntLinkList() {
 		this.head = null;
 		this.numberOfNodes = 0;
+		
 	}
 /*	public IntLinkList(Node head, int numberOfNodes) {
 		super();
@@ -20,6 +22,22 @@ public class IntLinkList {
 			Node tmp = new Node(element);
 			tmp.setLink(head);
 			head = tmp;
+		}
+		if(numberOfNodes ==1) {
+			tail = head;
+		}
+	}
+	public void remove(int target) {
+		Node cursor;
+		Node perc;
+		for(cursor = head, perc=null; cursor != null; perc = cursor.getLink()) {
+			if(target == cursor.getData()) {
+				head = cursor.getLink();
+				numberOfNodes--;
+			}else {
+				perc.setLink(cursor.getLink());
+				numberOfNodes--;
+			}
 		}
 	}
 	
